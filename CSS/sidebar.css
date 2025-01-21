@@ -1,0 +1,169 @@
+/* CSS/sidebar.css */
+
+/*-----------------------------------------------------*/
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark gray text */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fixed sidebar */
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* Scroll if content overflows */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Logo Image */
+.logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; /* Adjust maximum height */
+    object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-container {
+        margin-bottom: 10px; /* Reduce spacing for smaller screens */
+    }
+
+    .logo-img {
+        max-height: 50px; /* Smaller logo for small screens */
+    }
+}
+
+
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    /* color: inherit; */
+}
+
+.sidebar ul li a:hover {
+    background-color: #F4F9FD; /* Light gray on hover */
+    color: #007bff; /* Change text color to primary blue on hover */
+}
+
+.sidebar ul li a.active {
+    background-color: #007bff; /* Bootstrap primary blue for active link */
+    color: #ffffff; /* White text for active link */
+}
+
+.sidebar ul li a.active i {
+    color: #ffffff; /* White icon for active link */
+}
+
+.logout-form {
+    margin-top: 20px;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f44336; /* Red background */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.logout-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px; /* Width of the sidebar */
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.welcome-message {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sidebar ul li {
+        margin: 0 10px;
+    }
+
+    .logout-form {
+        margin-top: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        display: none; /* Hide the title on small screens */
+    }
+}
